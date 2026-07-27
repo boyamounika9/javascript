@@ -7,17 +7,23 @@
     <script>
   let year = Number(prompt("Enter year:"));
 
-if (year % 4 === 0) {
-    if (year % 100 !== 0 || year % 400 === 0) {
-        console.log("Leap Year");
-    } else {
-        console.log("Not a Leap Year");
-    }
-} else {
-    console.log("Not a Leap Year");
-}
+// if (year % 4 === 0) {
+//     if (year % 100 !== 0 || year % 400 === 0) {
+//         console.log("Leap Year");
+//     } else {
+//         console.log("Not a Leap Year");
+//     }
+// } else {
+//     console.log("Not a Leap Year");
+// }
     
-
+if (isNaN(year)) {
+    console.log("Please enter a valid year.");
+} else if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+    console.log("Leap year");
+} else {
+    console.log("Not a leap year");
+}
         
     </script>
 </head>
