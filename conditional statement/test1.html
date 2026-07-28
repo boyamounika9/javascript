@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let year=Number(prompt());
+        let month=Number(prompt());
+
+        if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)){
+            if(month ==2){
+                console.log(29);
+            }
+            else if (month in (1,3,5,7,8,10,12)){
+                console.log(31)
+            }
+            else{
+                console.log(30)
+            }
+        }
+        else{
+            if(month ==2){
+                console.log(28);
+            }
+            else if (month in (1,3,5,7,8,10,12)){
+                console.log(31)
+            }
+            else{
+                console.log(30)
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
