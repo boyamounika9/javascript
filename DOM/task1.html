@@ -19,6 +19,7 @@
         button{
             height: 30px;
             width: 50px;
+            border-radius: 5px;
         }
         #btncontainer{
             height: 100px;
@@ -28,20 +29,35 @@
             justify-content: space-around;
             align-items: center;
         }
+    
     </style>
 </head>
 <body>
     <section>
         <div id="container">
-            <h2 id="num">0</h2>
+            <h2 id="num"></h2>
             <div id="btncontainer">
-            <button id="btn-1"></button>
-            <button id="btn-2"></button>
-            <button id="btn-5"></button>
-            <button id="btn-10"></button>
+            <button id="btn-1">+1</button>
+            <button id="btn-2">+2</button>
+            <button id="btn-5">+5</button>
+            <button id="btn-10">+10</button>
             </div>
-            <button id="reseting"></button>
+            <button id="reseting">Reset</button>
         </div>
     </section>
 </body>
+<script>
+    let c=0;
+    num.textContent=c;
+
+    let plus1=document.getElementById('btn-1');
+    let plus2=document.getElementById('btn-2');
+    let plus5=document.getElementById('btn-5');
+    let plus10=document.getElementById('btn-10');
+    let resetbtn=document.getElementById('reseting');
+
+    
+
+
+</script>
 </html>
