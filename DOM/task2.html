@@ -27,14 +27,25 @@
 <body>
     <section>
         <div id="container">
-            <h1 id="text">
-                <span>SunShine</span>
-            </h1>
-            <button id="hello">Hello</button>
+            <h1 id="text"></h1>
+            <button id="hello" onclick="hello()">Hello</button>
             <button id="hi">Hii</button>
             <button id="bye">Byee</button>
         </div>
     </section>
 </body>
-<script></script>
+<script>
+    let cont=document.getElementById('text');
+    let hii=document.getElementById('hi');
+    let byee=document.getElementById('bye');
+    
+    let c="SunShine"
+    cont.textContent=c;
+
+    function hello(){
+        cont.textContent="Helloo "+c;
+    }
+
+
+</script>
 </html>
