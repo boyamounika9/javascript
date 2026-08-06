@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        section>#container{
+            height: 200px;
+            width: 300px;
+            background-color: gainsboro;
+            margin: 100px auto;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button{
+            height: 30px;
+            width: 50px;
+        }
+        #btncontainer{
+            height: 100px;
+            width: 250px;
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <section>
+        <div id="container">
+            <h2 id="num">0</h2>
+            <div id="btncontainer">
+            <button id="btn-1"></button>
+            <button id="btn-2"></button>
+            <button id="btn-5"></button>
+            <button id="btn-10"></button>
+            </div>
+            <button id="reseting"></button>
+        </div>
+    </section>
 </body>
 </html>
