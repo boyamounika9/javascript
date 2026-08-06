@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        nav{
+            background-color: rgb(243, 114, 221);
+            color: white;
+            padding: 20px;
+            font-size: larger;
+        }
+
+        section>#Counterapp{
+            height: auto;
+            width: 300px;
+            padding: 30px;
+            margin: 50px auto;
+            border:solid 2px rgb(255, 102, 207) ;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>🕰️ Counter App</h2>
+    </nav>
+    <section>
+        <div id="Counterapp">
+            <h2>Counter</h2>
+            <h3 id="counttext"></h3>
+            <button id="dec">DEC</button>
+            <button id="inc">INC</button>
+
+        </div>
+    </section>
+</body>
+<script>
+    let countext=document.getElementById('counttext');
+    let dec=document.getElementById('dec');
+    let inc=document.getElementById('inc');
+
+
+
+    let c=0;
+    countext.textContent=c;
+
+    inc.addEventListener('click', function(){
+        c=c+1;
+        countext.textContent=c;
+    }) 
+
+    dec.addEventListener('click',function(){
+        if (c>0){
+             c=c-1;
+             countext.textContent=c;
+        }
+    }) 
+
+</script>
+</html>
