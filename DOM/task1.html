@@ -50,6 +50,7 @@
     let c=0;
     num.textContent=c;
 
+    let contnet=document.getElementById('num');
     let plus1=document.getElementById('btn-1');
     let plus2=document.getElementById('btn-2');
     let plus5=document.getElementById('btn-5');
@@ -58,12 +59,17 @@
 
     function btn1(){
         c=c+1;
-        num.textContent=c;
+        contnet.textContent=c;
     }
 
     function btn2(){
         c=c+2;
-        num.textContent=c;
+        contnet.textContent=c;
+    }
+
+    plus5.onclick=function(){
+        c=c+5;
+        contnet.textContent=c;
     }
 
 
