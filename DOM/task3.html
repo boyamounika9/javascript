@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes</title>
+    <style>
+        section{
+            margin: 100px auto;
+            height: 500px;
+            width: 400px;
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+        }
+        #div1{
+            height: 300px;
+            width: 300px;
+            background-color: aliceblue;
+            border-radius: 50%;
+        }
+        img{
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+        }
+        button{
+            height: 40px;
+            font-size: 20px;
+            border-radius: 30px;
+        }
+        #buttons{
+            display: flex;
+            justify-content: space-around;
+            width: 300px;
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="div1"><img src="./pic.png" alt=""></div>
+
+        <div id="buttons">
+            <button id="likes" >❤️ like</button>
+            <h3 id="likecount" >0</h3>
+
+            <button id="dislikes" >💔 dislike</button>
+            <h3 id="dislikecount">0</h3>
+        </div>
+        <h1>TOTAL COUNT </h1>
+        <h2 id="totalcount" >0</h2>
+    </section>
+</body>
+<script>
+   let like=document.getElementById('likecount');
+   let lbtn=document.getElementById('likes');
+   let dlike=document.getElementById('dislikecount');
+   let dbtn=document.getElementById('dislikes');
+   let total=document.getElementById('totalcount');
+
+    let c=0;
+    let d=0;
+    let t=0;
+
+   lbtn.addEventListener('click',function(){
+        c=c+1;
+        like.textContent=c;
+
+        tot()
+    }) 
+
+
+   dbtn.addEventListener('click',function(){
+        d=d+1;
+        dlike.textContent=d;
+
+        tot()
+    }) 
+
+
+    function tot(){
+        t=c+d;
+        total.textContent=t;
+
+    }
+
+
+   
+
+
+</script>
+</html>
