@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            height: 100vh;
+            width: 100vh;
+        }
+
+        .fbtn {
+            background-color: black;
+            color: aliceblue;
+            height: 30px;
+            width: 50px;
+        }
+
+        .lbtn {
+            background-color: white;
+            color: black;
+            height: 30px;
+            width: 50px;
+        }
+        .div1{
+            background-color: rgb(205, 224, 241);
+            color: black;
+            height: 300px;
+            width: 300px;
+        }
+        .div2{
+            background-color: rgb(2, 2, 2);
+            color: white;
+            height: 300px;
+            width: 300px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <button class="fbtn " id="btn">Dark</button>
+        <div class="div1 " id="container">
+            <h1 id="h1tag">Ligth mode is on</h1>
+        </div>
+    </section>
+</body>
+<script>
+    let btn1=document.getElementById('btn');
+    let divtag=document.getElementById('container');
+    let headingtag=document.getElementById('h1tag');
+
+    btn1.addEventListener('click',function(){
+        let a= btn1.classList.contains('lbtn');
+        if(a){
+            btn1.textContent='Dark'
+            headingtag.textContent="Light mode is on"
+        }
+        else{
+             btn1.textContent='Light'
+            headingtag.textContent="Dark mode is on"
+        }
+        
+        btn1.classList.toggle('lbtn')
+        divtag.classList.toggle('div2')
+    })
+
+    
+</script>
+</html>
