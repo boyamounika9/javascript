@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-color{
+            background-color: aqua;
+        }
+        .text-color{
+            color: blue;
+        }
+        .text-center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="bg-color text-color " id="h1tag">helloo my name is mounika</h1>
+</body>
+<script>
+    let tagh1=document.getElementById('h1tag');
+    tagh1.classList.add('text-center');
+
+    tagh1.classList.remove('text-color');
+
+    tagh1.classList.toggle('text-color');
+
+    console.log( tagh1.classList.contains('text-color'));
+
+    
+
+</script>
+</html>
