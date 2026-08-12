@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        form{
+            background-color: aqua;
+            height: 200px;
+            width: 300px;
+            padding: 30px;
+            text-align: center;
+        }
+
+
+    </style>
 </head>
 <body>
     <form id="form-tag">
@@ -16,8 +27,9 @@
         <input type="submit"  id="sub">
     </form>
     <hr>
-    <h1>Welcome</h1>
-    <h1 id="h1-tag">Your email is :</h1>
+  
+    <h1 id="h1-tag"></h1>
+    
 
     <script>
        let formtag=document.getElementById('form-tag');
@@ -27,7 +39,8 @@
         formtag=addEventListener('submit',function(event){
             event.preventDefault();
             let emailid=document.getElementById('mail').value;
-            h1tag.textContent+=emailid;
+            h1tag.textContent=`Welcome! 
+                               Your email is :${emailid}`;
            
             
             
