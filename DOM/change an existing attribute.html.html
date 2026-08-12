@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <button id="btn1">Change image</button><br><br>
-    <img src="./pic.png" height="200px">
+    <button id="btn1">Change image</button>
+    <br><br>
+
+    <img id="image" src="./pic.png" height="200px">
+
+    <script>
+        let btn = document.getElementById('btn1');
+        let x = document.getElementById('image');
+
+        btn.addEventListener('click', function () {
+            x.setAttribute('src', './img2.png');
+        });
+    </script>
 </body>
-<script>
-    btn=document.getElementById('btn1')
-</script>
 </html>
