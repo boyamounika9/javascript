@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Show Url</button>
+    <a id="anc" href="https://www.youtube.com/"></a>
+
+</body>
+<script>
+    paragra=document.getElementById('para');
+    btn=document.getElementById('btn1');
+    anchor=document.getElementById('anc');
+    btn.addEventListener('click',function(){
+       let pa= anchor.getAttribute('href');
+       console.log(pa);
+       document.body.append(pa);
+
+    })
+</script>
+</html>
