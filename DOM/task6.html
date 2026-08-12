@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 200px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn-1">Check</button>
+    <div id="div-1">
+        <h1 id="h1-tag"></h1>
+    </div>
+
+</body>
+<script>
+    
+    btn1=document.getElementById('btn-1');
+    div1=document.getElementById('div-1');
+    h1tag=document.getElementById('h1-tag');
+
+    btn1.addEventListener('click',function(){
+        num=Number(prompt("enter number:"));
+        if (num%2==0){
+            h1tag.textContent=`${num} is even`;
+            div1.style.backgroundColor='black';
+            h1tag.style.color='blue';  
+
+        }
+        else{
+            h1tag.textContent=`${num} is Odd`;
+            div1.style.backgroundColor='blue';
+            h1tag.style.color='white';  
+
+        }
+    })
+</script>
+</html>
