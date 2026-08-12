@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div-1">
+        <p id="ptag">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, sit.</p>
+        <h2 id="h2-tag">helooo</h2>
+    </div>
+    <p>Lorem ipsum dolor sit.</p>
+</body>
+<script>
+
+    //creating element
+    let h1tag=document.createElement('h1');
+    console.log(h1tag)
+    h1tag.textContent='hello'
+
+
+    //append the element
+    let div1=document.getElementById('div-1');
+    document.body.append(h1tag)
+    div1.append(h1tag);
+
+
+    //remove element
+    let pa=document.getElementById('ptag');
+
+    div1.removeChild(pa)
+
+
+    let h2tag=document.getElementById('h2-tag');
+    h2tag.remove();
+
+
+
+
+</script>
+</html>
