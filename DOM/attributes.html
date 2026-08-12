@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div-1">
+        <p id="p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laudantium ipsa eligendi voluptatibus?</p>
+        <h1 id="h1">Hello</h1>
+        <h3 class="h3tag">byee</h3>
+    </div>
+    
+</body>
+<script>
+    let x=document.getElementById('p-1')
+    let y=document.getElementById('div-1')
+    let h3tags=document.getElementsByClassName('h3tag')
+
+
+//hasAttribute
+   console.log(x.hasAttribute('id'))
+   console.log(y.hasAttribute('id'))
+
+//getAttribute
+   console.log(x.getAttribute('id'))
+   console.log(y.getAttribute('id'))
+
+//removeAttribute
+   console.log(x.removeAttribute('id'))
+   console.log(x.getAttribute('id'))
+
+
+//setAttribute
+   console.log(y.setAttribute('class','divtag'));
+   console.log(y.getAttribute('class'))
+
+
+//Attribute
+   console.log(y.attributes)
+
+
+
+
+
+
+
+   
+
+</script>
+</html>
