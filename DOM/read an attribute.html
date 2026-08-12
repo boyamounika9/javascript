@@ -17,7 +17,10 @@
     btn.addEventListener('click',function(){
        let pa= anchor.getAttribute('href');
        console.log(pa);
-       document.body.append(pa);
+       let para=document.createElement('p');
+       para.textContent=pa;
+       document.body.append(para);
+
 
     })
 </script>
