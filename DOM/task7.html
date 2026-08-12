@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form-tag">
+        <label for="uname">user name</label>
+        <input type="text" value="Mounika" id="uname"><br><br>
+        <label for="pass">Password</label>
+        <input type="password" value="123456" id="pass"><br><br>
+        <label for="mail">email</label>
+        <input type="email" value="189mounika.b@gmail.com" id="mail"><br><br>
+        <input type="submit"  id="sub">
+    </form>
+    <hr>
+    <h1>Welcome</h1>
+    <h1 id="h1-tag">Your email is :</h1>
+
+    <script>
+       let formtag=document.getElementById('form-tag');
+       let emailfield=document.getElementById('mail');
+        let h1tag=document.getElementById('h1-tag')
+
+        formtag=addEventListener('submit',function(event){
+            event.preventDefault();
+            let emailid=document.getElementById('mail').value;
+            h1tag.textContent+=emailid;
+           
+            
+            
+
+        })
+    </script>
+</body>
+</html>
