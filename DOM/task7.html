@@ -27,20 +27,23 @@
         <input type="submit"  id="sub">
     </form>
     <hr>
-  
+    <h1 id="h2-tag"></h1>
     <h1 id="h1-tag"></h1>
     
 
     <script>
        let formtag=document.getElementById('form-tag');
        let emailfield=document.getElementById('mail');
-        let h1tag=document.getElementById('h1-tag')
+        let h1tag=document.getElementById('h1-tag');
+        let h2tag=document.getElementById('h2-tag')
 
         formtag=addEventListener('submit',function(event){
             event.preventDefault();
             let emailid=document.getElementById('mail').value;
-            h1tag.textContent=`Welcome! 
-                               Your email is :${emailid}`;
+            let username=document.getElementById('uname').value;
+            h2tag.textContent=`Welcome! ${username}`;
+            h1tag.textContent=`Your email is :${emailid}`;
+            
            
             
             
