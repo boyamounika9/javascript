@@ -3,9 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dynamic Image Gallery</title>
+
+    <style>
+        #gallery {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        #gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <button id="add">Add Image</button>
+    <button id="remove">Remove Last Image</button>
+
+    <div id="gallery"></div>
+
+    <script>
+
+        let add = document.getElementById("add");
+        let remove = document.getElementById("remove");
+        let gallery = document.getElementById("gallery");
+
+        let images = [
+            "./pic.png",
+            "./img1.png",
+            "./img2.png",
+            "./img3.png",
+            "./img4.png"
+        ];
+
+        let i = 0;
+
+        add.addEventListener("click", function () {
+
+            // Create image
+            let img = document.createElement("img");
+
+            // Set image source
+            img.setAttribute("src", images[i]);
+
+            // Add image to gallery
+            gallery.appendChild(img);
+
+            i++;
+
+            // Start again from first image
+            if (i == images.length) {
+                i = 0;
+            }
+        });
+
+
+        remove.addEventListener("click", function () {
+
+            // Get last image
+            let lastImage = gallery.lastElementChild;
+
+            // Remove last image
+            if (lastImage) {
+                lastImage.remove();
+            }
+        });
+
+    </script>
+
 </body>
 </html>
