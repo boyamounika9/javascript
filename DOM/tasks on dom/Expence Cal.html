@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: chartreuse;
+             width: 400px;
+             height: 250px;
+             
+        }
+       form{
+            display:flex;
+            flex-direction: column;
+            width: 300px;
+            gap: 20px;
+            padding: 30px;
+            
+        }
+        input{
+            height: 20px;
+        }
+        button{
+            height: 35px;
+            width: 60px;
+            border-radius: 10px;
+            
+        }
+        h1{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form id="form">
+            <input type="text" placeholder="Total Amount" id="TA">
+            <input type="text"  id="you" placeholder="Your Expences">
+            <input type="text" value="0" id="friend" readonly placeholder="Your Friend Expences">
+            <select id="dropdown">
+                <option selected disabled>Who Paid Bill</option>
+                <option >You</option>
+                <option >Your Friend</option>
+            </select>
+            <button id="btn">click</button>
+        </form>
+    </div>
+    <h1 id="final"></h1>
+</body>
+<script>
+    let total=document.getElementById('TA');
+    let yourexp=document.getElementById('you');
+    let frdexp=document.getElementById('friend');
+    let selectedopt=document.getElementById('dropdown');
+    let butn=document.getElementById('btn');
+    let h1tag=document.getElementById('final');
+
+    yourexp.addEventListener('change',function(){
+        frdexp.setAttribute('value',(total.value)-Number(yourexp.value))
+    })
+
+    butn.addEventListener('click',function(e){
+        e.preventDefault();
+        if(selectedopt.value=='You'){
+          h1tag.textContent=`Your Friend gives you ${frdexp.value}`  
+        }
+        else{
+             h1tag.textContent=`You need to give ${yourexp.value} to your friend`  
+        }
+    })
+
+</script>
+</html>
