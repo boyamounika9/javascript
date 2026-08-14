@@ -92,11 +92,12 @@
                 <h3>Email </h3>
                 <input type="email">
             </div>
-            <div class="pass">
+            <div class="pass" id="cont">
                 <h3>password</h3>
                 <input type="password" id="pass">
                 <h3>Conform password</h3>
                 <input type="password" id="cpass">
+                
                 
             </div>
             </div>
@@ -111,10 +112,15 @@
     form=document.getElementById('form');
     password=document.getElementById('pass');
     conformpassword=document.getElementById('cpass');
+    divtag=document.getElementById('cont');
 
-    form.addEventListener('submit',function(){
+    form.addEventListener('submit',function(e){
+        e.preventDefault();
         if(password.value!=conformpassword.value){
-            alert('password and conform password are not matched')
+            let ale=document.createElement('h3');
+            ale.textContent='password and Conform password are not matched';
+            ale.style.color='red'
+            divtag.appendChild(ale);
         }
     })
 
