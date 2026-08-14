@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        section{
+            height: 800px;
+            width: 100%;
+            background: linear-gradient(to right, #5ea9e7, #8e2de2);
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .body{
+            height: 500px;
+            width: 500px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            justify-content: start;
+            padding: 20px;
+
+        }
+        input{
+            font-size: 35px;
+            height: 30px;
+            border: none;
+            box-shadow: 0px 0px 2px 2px gray;
+        }
+        .inputs
+        {
+            height: 450px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        h3{
+            margin-top: 40px;
+        }
+        button{
+            height: 65px;
+            width: 370px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(to right, #5ea9e7, #8e2de2);
+            margin-bottom: 20px;
+            border-radius: 50px;
+        }
+        h4{
+            font-family: sans-serif;
+            font-size: 20px;
+            margin-top: 10px;
+            color: #8e2de2;
+        }
+        h1{
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 50px;
+        }
+        
+        span{
+            color: #5ea9e7;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <section>
+        <form id="form">
+        <div class="body">
+            <h1>Login Form</h1>
+            <div class="inputs">
+            <div class="email">
+                <h3>Email </h3>
+                <input type="email">
+            </div>
+            <div class="pass">
+                <h3>password</h3>
+                <input type="password" id="pass">
+                <h3>Conform password</h3>
+                <input type="password" id="cpass">
+                
+            </div>
+            </div>
+            <button>Login Now</button>
+            <p>Not a member&quest;  <span>Signup now</span></p>
+
+        </div>
+    </form>
+    </section>
+</body>
+<script>
+    form=document.getElementById('form');
+    password=document.getElementById('pass');
+    conformpassword=document.getElementById('cpass');
+
+    form.addEventListener('submit',function(){
+        if(password.value!=conformpassword.value){
+            alert('password and conform password are not matched')
+        }
+    })
+
+
+
+</script>
+</html>
