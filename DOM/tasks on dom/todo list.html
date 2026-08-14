@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+#div-1 {
+    width: 400px;
+    margin: 50px auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#infied {
+    width: 250px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#btn {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 8px;
+    width: 350px;
+}
+
+li span {
+    font-size: 18px;
+}
+
+li button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div id="div-1">
+        <h1>TO DO LIST</h1>
+        <input type="text"  id="infied">
+    </div>
+    <button id="btn">Add task</button>
+</body>
+<script>
+    inputfied=document.getElementById('infied');
+    btn=document.getElementById('btn');
+    div1=document.getElementById('div-1');
+    
+    btn.addEventListener('click', function () {
+    let listitem = document.createElement('li');
+
+    let text = document.createElement('span');
+    text.textContent = inputfied.value;
+
+    let del = document.createElement('button');
+    del.textContent = 'delete';
+
+    del.addEventListener('click', function () {
+        listitem.remove();
+    });
+
+    listitem.appendChild(text);
+    listitem.appendChild(del);
+
+    div1.appendChild(listitem);
+    inputfied.value="";
+});
+
+</script>
+</html>
