@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Table</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="form">
+        <input type="number" id="rows" placeholder="Rows">
+        <input type="number" id="columns" placeholder="Columns">
+        <input type="submit" value="Create Table">
+    </form>
+
+    <script>
+        let form = document.getElementById('form');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            let rows = Number(document.getElementById('rows').value);
+            let columns = Number(document.getElementById('columns').value);
+
+            let table = document.createElement('table');
+
+            for (let i = 0; i < rows; i++) {
+
+                let r = document.createElement('tr');
+
+                for (let j = 0; j < columns; j++) {
+
+                    let d = document.createElement('td');
+
+                    d.innerText = "Cell";
+
+                    r.appendChild(d);
+                }
+
+                table.appendChild(r);
+            }
+
+            document.body.appendChild(table);
+        });
+    </script>
+
+</body>
+</html>
