@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        section{
+            height: 100vh;
+            width: 800px;
+            background-color: antiquewhite;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            background-color: chocolate;
+        }
+        button{
+            height: 30px;
+            width: 60px;
+            font-size: 20px;
+        }
+        #container{
+            height: 200px;
+            width: 200px;
+            background-color: rgba(76, 22, 12, 0.629);
+        }
+        .hide{
+            visibility: hidden;
+        }
+        .show{
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <nav>
+        <h1>JBank</h1>
+        <a href=""><button id="login">Login</button></a>
+    </nav>
+    <div id="container" class="div-1">
+        <form id="form">   
+            <input type="text" placeholder="username" id="username"><span id="intomark">❌</span>
+            <input type="password" placeholder="password" id="password">
+            <input type="submit">
+        </form>
+    </div>
+    </section>
+</body>
+<script>
+    let login=document.getElementById('login');
+   let wrong=document.getElementById('intomark');
+    let div1=document.getElementById('container');
+    let form=document.getElementById('form');
+    let user=document.getElementById('username');
+    let pass=document.getElementById('password');
+
+    form.addEventListener('submit',function(e){
+        e.preventDefault();
+        if((user.value=='user') && (pass.value=='user123') ){
+            div1.classList.add('hide');
+        }
+    })
+    wrong.addEventListener('click',function(){
+        div1.classList.add('hide');
+
+    })
+    login.addEventListener('click',function(){
+         div1.classList.add('show');
+    })
+</script>
+</html>

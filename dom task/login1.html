@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JBank</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        .navbar {
+            height: 70px;
+            padding: 0 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #172554;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .login-btn {
+            padding: 10px 24px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: #2563eb;
+            color: white;
+
+            font-size: 15px;
+            font-weight: 600;
+
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #1d4ed8;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        .hero {
+            min-height: calc(100vh - 70px);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px 20px;
+            visibility: hidden;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1000px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 80px;
+        }
+
+
+        /* =========================
+           LEFT CONTENT
+        ========================== */
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h2 {
+            margin-bottom: 18px;
+
+            font-size: 48px;
+            line-height: 1.1;
+
+            color: #172554;
+        }
+
+        .hero-text h2 span {
+            color: #2563eb;
+        }
+
+        .hero-text p {
+            max-width: 450px;
+
+            font-size: 17px;
+            line-height: 1.7;
+
+            color: #64748b;
+        }
+
+
+        /* =========================
+           LOGIN CARD
+        ========================== */
+
+        .login-card {
+            position: relative;
+
+            width: 360px;
+            padding: 35px;
+
+            background: white;
+            border-radius: 16px;
+
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+
+            border: none;
+            background: transparent;
+
+            font-size: 24px;
+            color: #94a3b8;
+
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: #ef4444;
+        }
+
+        .login-card h3 {
+            margin-bottom: 8px;
+
+            font-size: 25px;
+            color: #172554;
+        }
+
+        .login-card .subtitle {
+            margin-bottom: 25px;
+
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+
+
+        /* =========================
+           FORM
+        ========================== */
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            color: #334155;
+        }
+
+        .form-group input {
+            width: 100%;
+            height: 45px;
+
+            padding: 0 13px;
+
+            border: 1px solid #dbe1e8;
+            border-radius: 8px;
+
+            outline: none;
+
+            font-size: 14px;
+        }
+
+        .form-group input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .submit-btn {
+            width: 100%;
+            height: 45px;
+
+            margin-top: 5px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: #2563eb;
+            color: white;
+
+            font-size: 15px;
+            font-weight: 600;
+
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #1d4ed8;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <h1 class="logo">
+            J<span>Bank</span>
+        </h1>
+
+        <button class="login-btn" id="login">
+            Login
+        </button>
+
+    </nav>
+
+
+    <!-- MAIN -->
+    <main class="hero" id="cont">
+
+        <div class="hero-content">
+
+
+            <!-- LOGIN CARD -->
+            <div class="login-card" id="container">
+
+                <button class="close-btn" id="intomark" type="button">
+                    ×
+                </button>
+
+                <h3>
+                    Welcome Back
+                </h3>
+
+                <p class="subtitle">
+                    Login to your JBank account
+                </p>
+
+
+                <form id="form">
+
+                    <div class="form-group">
+
+                        <label for="username">
+                            Username
+                        </label>
+
+                        <input type="text" id="username" placeholder="Enter username">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input type="password" id="password" placeholder="Enter password">
+
+                    </div>
+
+
+                    <input type="submit" class="submit-btn" id="btn">
+        
+                    
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+<script>
+    let login=document.getElementById('login');
+    let username=document.getElementById('username').value ;
+    let password=document.getElementById('password').value ;
+    let cont=document.getElementById('cont');
+    let form=document.getElementById('form');
+    let intomark=document.getElementById('intomark');
+
+
+    login.addEventListener('click',function(){
+        cont.style.visibility='visible';
+    })
+
+    form.addEventListener('submit',function(){
+        if(username=='user' && password=='user123'){
+            cont.style.visibility='hidden';
+        }
+    })
+
+    intomark.addEventListener('click',function(){
+        cont.style.visibility='hidden';
+
+    })
+
+
+
+</script>
+
+</html>
