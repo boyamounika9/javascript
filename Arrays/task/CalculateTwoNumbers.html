@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calculate sum of two numbers</h1>
+    <form id="form-1">
+        <input type="text" id="firstnum" placeholder="Enter First number">
+        <input type="text" id="secondnum" placeholder="Enter Second number">
+        <input type="submit">
+    </form>
+    <div id="div1"></div>
+</body>
+<script>
+    let form1 = document.getElementById('form-1');
+
+    let div = document.getElementById('div1');
+
+
+    form1.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let fnum = Number(document.getElementById('firstnum').value);
+        let snum = Number(document.getElementById('secondnum').value);
+        let sumnum = fnum + snum;
+        let sum = document.createElement('h1');
+        sum.textContent = "The sum of given two numbers is: " + sumnum;
+        div.appendChild(sum)
+
+    })
+</script>
+
+</html>
