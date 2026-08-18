@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Student Marks Calculator</h1>
+    <form id="form">
+        <input type="text" name="" id="StudentName" placeholder=" Enter Student Name">
+        <input type="text" name="" class="marks" id="JavaMarks" placeholder="Enter Java Marks">
+
+        <input type="text" name="" class="marks" id="JavaScriptMarks" placeholder="Enter JavaScript Marks">
+
+        <input type="text" name="" class="marks" id="HTMLMarks" placeholder="Enter HTML Marks">
+        <input type="submit" name="" id="">
+
+    </form>
+    <h1 id="totalmarks"></h1>
+    <h1 id="avgmarks"></h1>
+</body>
+<script>
+    let form = document.getElementById('form');
+    let totalmarks = document.getElementById('totalmarks');
+    let avgmarks = document.getElementById('avgmarks');
+
+
+
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let StudentName = document.getElementById('StudentName').value;
+
+        let marks = document.querySelectorAll('.marks');
+
+        let total=0;
+        let avg=0;
+        for (i of marks) {
+            total += Number(i.value);
+            avg = total / marks.length;
+        }
+
+        totalmarks.textContent = `${StudentName} 's Total Marks are ${total}`
+        avgmarks.textContent = `${StudentName} 's Avg Marks are ${avg}`
+
+
+
+
+    })
+
+</script>
+
+</html>
