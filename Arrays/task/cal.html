@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" name="" id="firstnum" placeholder="enter first number">
+        <input type="text" id="oper" placeholder="enter operator">
+        <input type="text" name="" id="secondnum" placeholder="enter second number">
+        <input type="submit" name="" id="">
+    </form>
+    <h1 id="h1tag"></h1>
+</body>
+<script>
+    let form = document.getElementById('form');
+    let h1tag=document.getElementById('h1tag');
+
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let firstnum = Number(document.getElementById('firstnum').value);
+        let operator = document.getElementById('oper').value;
+        let secondnum = Number(document.getElementById('secondnum').value);
+        let total;
+        if(operator=="+"){
+             total=firstnum+secondnum
+
+        }
+        else  if(operator=="-"){
+            total=firstnum-secondnum
+
+        }
+        else  if(operator=="*"){
+            total=firstnum*secondnum
+
+        }
+        else  if(operator=="/"){
+             total=firstnum/secondnum
+
+        }
+         h1tag.textContent='the result of the two numbers is : '+total;
+    })
+
+   
+
+
+
+
+</script>
+
+</html>
