@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Marks Analysis
+    </h1>
+</body>
+<script>
+
+    let marks = [85, 72, 91, 65, 48, 78, 35];
+    let total=0;
+    let avg=0;
+    let highestmarks=marks[0];
+    let lowestmarks=marks[0];
+    let noosabove70=0;
+    let failcount=0;
+
+    for(i of marks){
+        total+=i
+        if (i > highestmarks) {
+            highestmarks=i
+        }
+        if(i< lowestmarks){
+            lowestmarks=i
+        }
+        if(i>75){
+            noosabove70 ++
+        }
+         if(i<40){
+            failcount ++
+        }
+    }
+    console.log("total="+total);
+    console.log("avg="+total/marks.length);
+    console.log("highest marks="+highestmarks);
+    console.log("lowest marks="+lowestmarks);
+    console.log("Number of students who scored above 75 = "+noosabove70);
+    console.log("Number of students who failed (< 40) = "+failcount);
+
+
+
+
+
+
+</script>
+
+</html>
