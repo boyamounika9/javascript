@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Remove Failed Students</h1>
+</body>
+<script>
+
+    let students = [
+    { name: "Rahul", marks: 80 },
+    { name: "Priya", marks: 35 },
+    { name: "Arun", marks: 70 },
+    { name: "Kiran", marks: 25 }
+];
+students.forEach(function(a,b){
+    if(a.marks<40){
+       students.splice(b,1)
+    }
+
+
+})
+    console.log(students)
+
+</script>
+</html>
