@@ -16,7 +16,9 @@
     { name: "Sneha", marks: 35 }
 ];
 let arr=students.filter((a)=>{
-    return a.marks>=50
+    if(a.marks>=50){
+        return a.marks
+    }
 })
 console.log(arr)
 </script>
