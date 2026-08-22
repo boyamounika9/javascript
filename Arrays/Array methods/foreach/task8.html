@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Shopping Cart Problem</h1>
+    
+</body>
+<script>
+    let cart = [
+    { name: "Laptop", price: 50000 },
+    { name: "Mouse", price: 1000 },
+    { name: "Keyboard", price: 2000 },
+    { name: "Monitor", price: 15000 }
+];
+// cart.forEach((a,b)=>{
+//     if(a.price<5000){
+//         cart.splice(b,1)
+//     }
+// })
+
+[...cart].reverse().forEach((a) => {
+    if (a.price < 5000) {
+        let index = cart.indexOf(a);
+        cart.splice(index, 1);
+    }
+});
+
+console.log(cart)
+</script>
+</html>
