@@ -8,4 +8,17 @@
 <body>
     
 </body>
+<script>
+
+let products = [
+    { name: "Laptop", price: 60000 },
+    { name: "Mouse", price: 800 },
+    { name: "Keyboard", price: 2500 },
+    { name: "Monitor", price: 12000 }
+];
+let arr=products.filter((a)=>{
+    return a.price<5000
+})
+console.log(arr)
+</script>
 </html>
