@@ -9,13 +9,11 @@
     
 </body>
 <script>
-    let arr=[10,20,30,40,50];
-   let rearr=arr.filter((val,index)=>{
-   console.log(val,index)
-   if(val>30){
-    return index
-   }
-   })
-   console.log(rearr)
+    let a=[1,2,3,4,5];
+    let b=a.find((val,index)=>{
+        return val>2
+
+    })
+    console.log(b)
 </script>
 </html>
