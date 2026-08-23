@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form"> 
+        <input id="username" type="text">
+        
+        <button id="btn" type="submit">Submit</button> 
+    </form>
+    <p id="result"></p> 
+
+
+</body>
+<script>
+    let username=document.getElementById('username');
+    let form=document.getElementById('form');
+    let result=document.getElementById('result');
+
+    form.addEventListener('submit',function(event){
+        event.preventDefault();
+        let username=document.getElementById('username').value;
+        result.textContent=username;
+
+    })
+
+
+</script>
+</html>
