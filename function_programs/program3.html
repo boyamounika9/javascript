@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Function Returning Different Types </h1>
+</body>
+<script>
+    function process(value) {
+        if (value === "") {
+            return;
+        }
+        if (value > 10) {
+            return value * 2;
+        }
+        return "Small value";
+    }
+    console.log(process(""));
+    console.log(process(20));
+    console.log(process(5)); 
+</script>
+
+</html>
