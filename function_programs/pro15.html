@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dynamic DOM Update</h1>
+    <h1 id="title">Old Title</h1>
+     <button id="changeBtn">Change</button>
+</body>
+<script>
+/*Write JavaScript so that when the button is clicked:
+ Old Title
+  changes to: New Title
+   Requirements: 
+    getElementById()
+     addEventListener() 
+     textContent 
+     Arrow function */
+
+    let title_name=document.getElementById('title');
+    let btn=document.getElementById('changeBtn');
+
+    btn.addEventListener('click',()=>{
+        title_name.textContent="New Title"
+    })
+
+</script>
+</html>
