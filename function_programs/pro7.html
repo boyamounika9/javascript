@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Return the Callback Result </h1>
+</body>
+<script>
+    //Compare: 
+    function process(callback) {
+        callback();
+    }
+    //with: 
+    function process(callback) {
+        return callback();
+    }
+    //Given:
+    const result = process(() => {
+        return "Success";
+    });
+    console.log(result); 
+</script>
+
+</html>
