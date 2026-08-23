@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Multiple Callbacks </h1>
+
+</body>
+<script>
+    function calculate(a, b, success, failure) {
+        if (b !== 0) {
+            return success(a, b);
+        }
+        return failure();
+    }
+    const success = (a, b) => a / b;
+    const failure = () => "Cannot divide by zero";
+    console.log(calculate(20, 5, success, failure));
+    console.log(calculate(20, 0, success, failure)); 
+</script>
+
+</html>
