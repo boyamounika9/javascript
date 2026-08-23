@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let products = [
+    { id: 101, name: "Laptop", price: 60000, category: "Electronics" },
+    { id: 102, name: "Shoes", price: 3000, category: "Fashion" },
+    { id: 103, name: "Mobile", price: 25000, category: "Electronics" },
+    { id: 104, name: "Watch", price: 5000, category: "Fashion" },
+    { id: 105, name: "Headphones", price: 2000, category: "Electronics" }
+];
+let Electronics =products.filter((a)=>{
+    return a.category=="Electronics"
+})
+let pronames=products.map((a)=>{
+    return a.name
+})
+let costing =products.filter((a)=>{
+    return a.price<10000
+})
+let ID103=products.find((a)=>{
+    return a.id==103
+})
+
+
+console.log(Electronics)
+console.log(pronames)
+console.log(costing)
+
+products.forEach((a)=>{
+    console.log(`${a.name} - ₹${a.price}`)
+})
+
+
+</script>
+</html>
