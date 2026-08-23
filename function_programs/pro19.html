@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide{
+            visibility: hidden;
+        }
+        .show{
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Toggle DOM State</h1>
+    <p id="message">Hello JavaScript</p>
+     <button id="toggleBtn">Toggle</button> 
+    
+</body>
+<script>
+    /*When the button is clicked:
+
+If the message is visible → hide it
+If the message is hidden → show it
+
+Requirement:
+
+Use a DOM-based approach
+Do not create a new element
+Use the existing message element
+Toggle the visibility of the message using JavaScript*/
+
+
+let mes=document.getElementById('message');
+let btn=document.getElementById('toggleBtn');
+
+btn.addEventListener('click',()=>{
+    mes.classList.toggle
+})
+
+
+
+
+
+</script>
+</html>
