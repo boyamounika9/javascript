@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event Object </h1>
+    <button id="btn">Click Me</button> 
+</body>
+<script>
+    /*Write an event handler that prints:
+Event: click
+Target: [button element]
+
+Using:
+
+event.type
+event.target
+
+Challenge:
+Explain why event is passed automatically to the callback.*/
+
+  let btn = document.getElementById("btn");
+
+        btn.addEventListener("click", (event) => {
+            console.log("Event:", event.type);
+            console.log("Target:", event.target);
+        });
+</script>
+</html>
