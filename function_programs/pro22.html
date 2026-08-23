@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form"> 
+        <input id="username" type="text">
+         <input id="password" type="password"> 
+         <button type="submit">Login</button>
+          <p id="message"></p> 
+    </form> 
+</body>
+<script>
+    let form=document.getElementById('form');
+    let username=document.getElementById('username');
+    let password=document.getElementById('password');
+    let message=document.getElementById('message');
+
+    form.addEventListener('submit',function(e){
+        e.preventDefault();
+        if (username.value.length==0){
+            message.textContent='Username is required'
+        }
+        else if (password.value.length==0){
+            message.textContent='Password is required'
+        }
+
+     else message.textContent="Login successful" 
+
+    })
+</script>
+</html>
