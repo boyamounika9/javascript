@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        <label>
+            <input type="checkbox" id="terms"> I accept the terms 
+        </label>
+        <button type="submit">Register</button>
+        <p id="message"></p>
+    </form>
+</body>
+<script>
+    let checkbox=document.getElementById('terms');
+    let form=document.getElementById('form');
+    let message=document.getElementById('message')
+    form.addEventListener('submit',function(e){
+        e.preventDefault();
+        if(checkbox.checked){
+            message.textContent='Terms accepted '
+        }
+        else
+            message.textContent='Please accept the terms '
+
+    })
+</script>
+</html>
