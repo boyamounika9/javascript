@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let students = [
+    { id: 1, name: "Rahul", marks: 85 },
+    { id: 2, name: "Priya", marks: 42 },
+    { id: 3, name: "Arun", marks: 76 },
+    { id: 4, name: "Sneha", marks: 91 },
+    { id: 5, name: "Kiran", marks: 38 }
+];
+
+let passed=students.filter((a)=>{
+    return a.marks>=40
+})
+
+let names=students.map((a)=>{
+    return a.name
+})
+let id4=students.find(function(a){
+    return a.id==4
+})
+console.log(passed);
+console.log(names)
+console.log(id4)
+
+students.forEach((a)=>{
+    console.log(`${a.name }-${a.marks}`)
+})
+
+</script>
+</html>
