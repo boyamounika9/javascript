@@ -6,6 +6,44 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form id="form">
+    <select id="course">
+        <option value="">Select Course</option>
+        <option value="javascript">JavaScript</option>
+        <option value="react">React</option>
+        <option value="node">Node</option>
+    </select>
+
+    <button type="submit">Submit</button>
+
+    <p id="result"></p>
+</form>
+
 </body>
+<script>
+    let form=document.getElementById('form');
+   
+    let result=document.getElementById('result');
+
+    form.addEventListener('submit',function(e){
+        e.preventDefault();
+        let course=document.getElementById('course');
+        if(course.value==''){
+            result.textContent='Please select a course'
+        }
+        else if(course.value=='javascript'){
+            result.textContent='You selected JavaScript'
+
+        }
+        else if(course.value=='react'){
+            result.textContent='You selected React'
+
+        }
+        else{
+            result.textContent='You selected Node'
+
+        }
+    })
+
+</script>
 </html>
