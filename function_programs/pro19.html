@@ -8,15 +8,13 @@
         .hide{
             visibility: hidden;
         }
-        .show{
-            visibility: visible;
-        }
+    
     </style>
 </head>
 
 <body>
     <h1>Toggle DOM State</h1>
-    <p id="message">Hello JavaScript</p>
+    <p id="message" class="">Hello JavaScript</p>
      <button id="toggleBtn">Toggle</button> 
     
 </body>
@@ -38,7 +36,7 @@ let mes=document.getElementById('message');
 let btn=document.getElementById('toggleBtn');
 
 btn.addEventListener('click',()=>{
-    mes.classList.toggle
+    mes.classList.toggle('hide');
 })
 
 
