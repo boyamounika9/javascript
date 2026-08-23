@@ -17,9 +17,8 @@
           //Now rewrite it using an implicit return 
 
           const calcul = (a, b) => 
-          console.log(a+ b) 
-          calcul(10, 20); 
-
+          ({ result: a + b }) 
+          console.log(calcul(10, 20));
 
 </script>
 </html>
