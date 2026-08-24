@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Start</label>
+    <input type="text" name="" id="start">
+     <label for="">End</label>
+    <input type="text" name="" id="end">
+    <button id="get">Get</button>
+    <p id="arr"></p>
+    <h2 id="getvalues"></h2>
+</body>
+<script>
+    let array=[1,2,3,4,5,6,7,8,9]
+    let arr=document.getElementById('arr');
+    let getvalues=document.getElementById('getvalues')
+    arr.append(array)
+
+    let get=document.getElementById('get');
+    get.addEventListener('click',function(){
+        let start= +document.getElementById('start').value;
+        let end= +document.getElementById('end').value;
+
+        let part=array.slice(start,end)
+        getvalues.textContent=`The values between the positions from ${start} to ${end} : ${part}`
+
+        
+
+
+
+    })
+
+</script>
+</html>
