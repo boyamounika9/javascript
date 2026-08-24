@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Position</label>
+    <input type="text" name="" id="position">
+    <label for="">New Element</label>
+    <input type="text" name="" id="newele">
+    <button id="replace">Replace</button>
+    <h1 id="result"></h1>
+</body>
+<script>
+    let array = [1,2,3,5]
+    let result=document.getElementById('result')
+
+    let replace = document.getElementById('replace')
+    replace.addEventListener('click', function () {
+        let newele = +document.getElementById('newele').value
+        let position = +document.getElementById('position').value
+
+        array.splice(position,1,newele);
+        result.textContent=array
+
+
+
+
+    })
+
+
+</script>
+
+</html>
