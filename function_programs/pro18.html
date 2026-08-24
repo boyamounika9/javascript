@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1> Event Handler as Callback </h1>
     <button id="btn">click</button>
 
 </body>
 <script>
-    let button=document.getElementById('btn')
+    let button = document.getElementById('btn')
     function handleClick() {
-        
+
         console.log("Clicked");
-         } 
-         button.addEventListener("click", handleClick); 
-         /*Task: 
-         Explain why this is correct: 
-         addEventListener("click", handleClick); 
-         but this is problematic: 
-         addEventListener("click", handleClick()); */
+    }
+    button.addEventListener("click", handleClick());
+    /*Task:
+    Explain why this is correct: 
+    addEventListener("click", handleClick); 
+    but this is problematic: 
+    addEventListener("click", handleClick()); */
 </script>
+
 </html>

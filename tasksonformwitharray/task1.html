@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="input">
+    <button id="btn">Add</button>
+</body>
+<script>
+    
+    let btn=document.getElementById('btn');
+    btn.addEventListener('click',function(e){
+        e.preventDefault();
+        let input_value=document.getElementById('input').value;
+        let array=document.createElement('li');
+        array.append(input_value);
+        document.body.append(array);
+
+
+
+    })
+
+</script>
+</html>
