@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="input">
+    <button id="btn1">Add</button>
+    <button id="btn2">find sum</button>
+    <h1 id="result"></h1>
+
+</body>
+<script>
+
+    let array = [];
+    let input = document.getElementById('input')
+    let btn1 = document.getElementById('btn1');
+    let btn2 = document.getElementById('btn2');
+    let result = document.getElementById('result');
+
+    btn1.addEventListener('click', function () {
+        let in_value = Number(document.getElementById('input').value);
+        console.log(typeof in_value)
+        array.push(in_value);
+        result.textContent = array;
+        input.value=""
+    })
+
+    btn2.addEventListener('click', function () {
+        let sum=0;
+        for (let i of array) {
+            sum+=i
+
+        }
+
+        result.textContent="The sum is"+sum;
+    })
+
+
+
+</script>
+
+</html>
