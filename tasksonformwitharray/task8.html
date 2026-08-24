@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Enter Number</label>
+    <input type="text" name="" id="input">
+    <button id="btn1">Add</button>
+    <button id="even">Show Even Numbers</button>
+    <button id="odd">Show Odd Numbers</button><br><br>
+    <input type="text" name="" id="filter">
+    <button id="filbtn">filter greater than "n"</button>
+    <h1 id="result"></h1>
+    <h2 id="evennum"></h2>
+    <h2 id="oddnum"></h2>
+    <h2 id="greaterthann"></h2>
+
+
+
+
+</body>
+<script>
+    let array = [];
+    let evennum=document.getElementById('evennum')
+    let oddnum=document.getElementById('oddnum')
+    let greaterthann=document.getElementById('greaterthann')
+
+    let input = document.getElementById('input')
+    let btn1 = document.getElementById('btn1');
+    let even=document.getElementById('even')
+    let odd=document.getElementById('odd')
+    let filbtn=document.getElementById('filbtn')
+
+    let result = document.getElementById('result')
+
+
+    btn1.addEventListener('click', function (e) {
+        e.preventDefault();
+        let in_value = document.getElementById('input').value;
+        array.push(in_value);
+        result.textContent = array;
+        input.value = "";
+
+
+    })
+
+    even.addEventListener('click',function(){
+        let evennumbers=array.filter((a)=>{
+            if(a%2==0){
+                return a
+            }
+        })
+        evennum.textContent=`The even numbers are : ${evennumbers}`
+    })
+
+
+     odd.addEventListener('click',function(){
+        let oddnumbers=array.filter((a)=>{
+            if(a%2!=0){
+                return a
+            }
+        })
+        oddnum.textContent=`The Odd numbers are : ${oddnumbers}`
+    })
+
+    filbtn.addEventListener('click',function(){
+        let filter= +document.getElementById('filter').value
+         let filterednums=array.filter((a)=>{
+            if(a>filter){
+                return a
+            }
+        })
+        greaterthann.textContent=`The values which are greater then ${filter}: ${filterednums}`
+    })
+
+    
+
+</script>
+
+</html>
