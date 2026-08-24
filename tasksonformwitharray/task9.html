@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter Number</label>
+    <input type="text" name="" id="input">
+    <button id="btn1">Find</button>
+    <h1 id="result"></h1>
+
+</body>
+<script>
+    let array = [10,25,30,50,65,78,49,1,2,3,4,5];
+    
+     let input = document.getElementById('input')
+    let btn1 = document.getElementById('btn1');
+    let result = document.getElementById('result')
+
+     btn1.addEventListener('click', function () {
+        let in_value = +document.getElementById('input').value;
+        let num= array.findIndex((a)=>{
+            return a==in_value
+
+        })
+        if(num != -1){
+        result.textContent=`found ${array[num]} on index ${num}`
+
+        }
+        else{
+        result.textContent=` number ${in_value} not found`
+
+        }
+
+
+        
+        input.value = "";
+
+
+    })
+    document.body.append(array)
+
+
+</script>
+</html>
