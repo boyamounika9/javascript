@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="text" name="" id="input">
+    <button id="btn1">Add</button>
+    <h1 id="result"></h1>
+
+</body>
+<script>
+    let array=[];
+    let input=document.getElementById('input')
+    let btn1=document.getElementById('btn1');
+    let result=document.getElementById('result')
+
+    btn1.addEventListener('click',function(e){
+        e.preventDefault();
+    let in_value=document.getElementById('input').value;
+    array.push(in_value**2);
+    result.textContent=array;
+    input.value="";
+   
+
+    })
+</script>
+</html>
