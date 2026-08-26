@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let p={name:"mounika",age:"21",phono:"9390332772"}
+    let stu=new Object()
+
+    stu.name="jeeva";
+    stu.id=101;
+
+    console.log(stu)
+
+
+    let emp={name:"jeeva",year:2003,skills:["html","js","css"],greet:function(){
+        return "hello jeeva"
+    },calage:()=>{
+       console.log( 2026-emp.year)
+    },adress:{city:"banglore",state:"karnataka"}}
+
+    console.log(emp.name)
+
+    console.log(emp.year)
+    emp.skills.forEach((a)=>{
+        console.log(a)
+    })
+emp.calage()
+
+console.log(emp.greet())
+
+console.log(emp.adress.city);
+
+
+
+
+</script>
+</html>
