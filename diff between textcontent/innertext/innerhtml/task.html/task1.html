@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+<script>
+    let container=document.getElementById("container");
+    let name=["mounika","Jeevan","Mehrin","Priya","Sindhu"]
+
+    let htmlcode=""
+    name.forEach(function(ele,ind){
+        htmlcode+=`<h1> Hello ${ele}</h1>`
+    })
+    container.innerHTML=htmlcode
+</script>
+</html>
