@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docume</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+<script>
+    let container=document.getElementById("container");
+    let names= [
+        { id: 101, name: "mounika", city: "bng" },
+        { id: 102, name: "ravi", city: "hyd" },
+        { id: 103, name: "sita", city: "chennai" }
+    ];
+
+    let htmlcode=""
+    names.forEach(function(ele,ind){
+        htmlcode+=`<h1> Hello ${ele.name}</h1>
+        <p>${ele.city}</p>`
+    })
+    container.innerHTML=htmlcode
+</script>
+</html>
