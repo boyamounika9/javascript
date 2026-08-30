@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Mouni App</span>
+            <button type="button" class="btn btn-danger">Login</button>
+        </div>
+    </nav>
+
+    <div id="container">
+    </div>
+
+
+</body>
+<script>
+    let products = [
+        {
+            id: 101,
+            name: "iPhone 15",
+            category: "Mobile",
+            brand: "Apple",
+            price: 0,
+             originalprice:500,
+            quantity: 0
+        },
+        {
+            id: 102,
+            name: "Galaxy S24",
+            category: "Mobile",
+            brand: "Samsung",
+            price: 0,
+             originalprice:600,
+            quantity: 0
+        },
+        {
+            id: 103,
+            name: "MacBook Air M3",
+            category: "Laptop",
+            brand: "Apple",
+            price: 0,
+             originalprice:700,
+            quantity: 0
+        },
+        {
+            id: 104,
+            name: "Inspiron 15",
+            category: "Laptop",
+            brand: "Dell",
+            price: 0,
+             originalprice:800,
+            quantity: 0
+        },
+        {
+            id: 105,
+            name: "WH-1000XM5",
+            category: "Headphones",
+            brand: "Sony",
+            price: 0,
+             originalprice:900,
+            quantity: 0
+        },
+        {
+            id: 106,
+            name: "AirPods Pro 2",
+            category: "Earbuds",
+            brand: "Apple",
+            price:0,
+             originalprice:1700,
+            quantity: 0
+        },
+       
+    ];
+    let container = document.getElementById('container')
+    
+function mainfun(){
+    let item = ''
+    products.forEach(function (ele, ind) {
+        item += `  <div class="card m-3 bg-warning color-light"  style="width: 18rem; display:inline-block  ">
+        <div class="card-body">
+            <h5 class="card-title"> ${ele.name}</h5>
+            <p class="card-text">id: ${ele.id}</p>
+            <p class="card-text">Price: ${ele.price}</p>
+            <p class="card-text">Category: ${ele.category}</p>
+            <p class="card-text">Brand: ${ele.brand}</p>
+            <p class="card-text">Quantity: ${ele.quantity}</p>
+
+
+                <button class="btn" id="inc" onclick="counter(${ele.id})">+</button>
+                 <button class="btn" id="dec" onclick="count(${ele.id})">-</button>
+               
+
+           
+        </div>
+    </div>`
+    })
+    container.innerHTML = item
+    }
+
+    mainfun()
+
+
+
+
+
+    function counter(id){
+        let targetitem = products.find((e)=>
+            e.id==id
+        )
+        targetitem.quantity++;
+       
+        targetitem.price= targetitem.price+targetitem.originalprice;
+        
+        mainfun()
+        
+    }
+
+
+     function count(id){
+        let target = products.find((e)=>
+            e.id==id
+        )
+        if(target.quantity>0){
+            target.quantity--;
+             target.price = target.price - target.originalprice;
+        }
+        mainfun()
+        
+    }
+
+</script>
+
+</html>
