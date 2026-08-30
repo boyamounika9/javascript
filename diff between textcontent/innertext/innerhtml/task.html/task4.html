@@ -11,72 +11,113 @@
 
 <body>
     <div class="container-fluid m-3 ">
-    <button type="button" class="btn btn-danger p-3 m-3">All Students</button>
-    <button type="button" class="btn btn-warning p-3 m-3">Boys</button>
-    <button type="button" class="btn btn-info p-3 m-3">Girls</button>
+        <button type="button" class="btn btn-danger p-3 m-3" id="all">All Students</button>
+        <button type="button" class="btn btn-warning p-3 m-3" id="boys">Boys</button>
+        <button type="button" class="btn btn-info p-3 m-3" id="girls">Girls</button>
     </div>
     <section id="container">
 
     </section>
 </body>
 <script>
-   let  container=document.getElementById('container')
-  let students = [
-    {
-        id: 101,
-        name: "Rahul",
-        age: 20,
-        gender: "Male",
-        course: "JavaScript",
-        city: "Bengaluru",
-        marks: 85
-    },
-    {
-        id: 102,
-        name: "Priya",
-        age: 21,
-        gender: "Female",
-        course: "Python",
-        city: "Mysuru",
-        marks: 92
-    },
-    {
-        id: 103,
-        name: "Arjun",
-        age: 19,
-        gender: "Male",
-        course: "Java",
-        city: "Chennai",
-        marks: 78
-    },
-    {
-        id: 104,
-        name: "Sneha",
-        age: 20,
-        gender: "Female",
-        course: "React",
-        city: "Hyderabad",
-        marks: 88
-    },
-    {
-        id: 105,
-        name: "Kiran",
-        age: 22,
-        gender: "Male",
-        course: "HTML & CSS",
-        city: "Mumbai",
-        marks: 74
-    },
-    {
-        id: 106,
-        name: "Ananya",
-        age: 19,
-        gender: "Female",
-        course: "JavaScript",
-        city: "Bengaluru",
-        marks: 95
+    let container = document.getElementById('container')
+    let students = [
+        {
+            id: 101,
+            name: "Rahul",
+            age: 20,
+            gender: "Male",
+            course: "JavaScript",
+            city: "Bengaluru",
+            marks: 85
+        },
+        {
+            id: 102,
+            name: "Priya",
+            age: 21,
+            gender: "Female",
+            course: "Python",
+            city: "Mysuru",
+            marks: 92
+        },
+        {
+            id: 103,
+            name: "Arjun",
+            age: 19,
+            gender: "Male",
+            course: "Java",
+            city: "Chennai",
+            marks: 78
+        },
+        {
+            id: 104,
+            name: "Sneha",
+            age: 20,
+            gender: "Female",
+            course: "React",
+            city: "Hyderabad",
+            marks: 88
+        },
+        {
+            id: 105,
+            name: "Kiran",
+            age: 22,
+            gender: "Male",
+            course: "HTML & CSS",
+            city: "Mumbai",
+            marks: 74
+        },
+        {
+            id: 106,
+            name: "Ananya",
+            age: 19,
+            gender: "Female",
+            course: "JavaScript",
+            city: "Bengaluru",
+            marks: 95
+        }
+    ];
+    function mainfun() {
+        let data = '';
+        students.forEach((ele) => {
+            data += `
+    <tr>
+      <td>${ele.id}</td>
+      <td>${ele.name}</td>
+      <td>${ele.age}</td>
+      <td>${ele.gender}</td>
+      <td>${ele.course}</td>
+      <td>${ele.city}</td>
+      <td>${ele.marks}</td>
+    </tr>
+ `;
+        })
+
+         container.innerHTML = `
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>age</th>
+                <th>gender</th>
+                <th>course</th>
+                <th>city</th>
+                <th>marks</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            ${data}
+        </tbody>
+    </table>
+`;
     }
-];
+    mainfun()
+
+
+
+
 </script>
 
 </html>
