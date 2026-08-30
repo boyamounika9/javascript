@@ -77,9 +77,9 @@
             marks: 95
         }
     ];
-    function mainfun() {
+    function mainfun(studentData) {
         let data = '';
-        students.forEach((ele) => {
+        studentData.forEach((ele) => {
             data += `
     <tr>
       <td>${ele.id}</td>
@@ -113,7 +113,39 @@
     </table>
 `;
     }
-    mainfun()
+    mainfun(students)
+
+
+    let all_stu_btn =document.getElementById('all');
+    let boy_stu_btn =document.getElementById('boys');
+    let girl_stu_btn =document.getElementById('girls');
+
+    all_stu_btn.addEventListener('click',function(){
+       mainfun(students);
+    })
+
+     boy_stu_btn.addEventListener('click',function(){
+        let boysdata =students.filter((e)=>{
+           return e.gender=="Male"
+            
+        })
+        
+         mainfun(boysdata)
+     })
+
+        girl_stu_btn.addEventListener('click',function(){
+        let girlsdata =students.filter((e)=>{
+           return e.gender=="Female"
+            
+        })
+        
+         mainfun(girlsdata)
+     })
+
+
+
+
+
 
 
 
