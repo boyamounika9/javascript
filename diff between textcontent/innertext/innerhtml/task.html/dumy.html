@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    let container=document.getElementById('container')
+
+    let names=[{name:"mounika",gender:"female"},{name:"jeevan",gender:"male"}]
+    let html=""
+    names.forEach((ele)=>{
+        html+=`<h1>${ele.name}</h1>`;
+    })
+    container.innerHTML=html
+
+</script>
+</html>

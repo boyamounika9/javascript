@@ -94,8 +94,8 @@ function mainfun(){
             <p class="card-text">Quantity: ${ele.quantity}</p>
 
 
-                <button class="btn" id="inc" onclick="counter(${ele.id})">+</button>
-                 <button class="btn" id="dec" onclick="count(${ele.id})">-</button>
+                <button class="btn btn-primary"  id="inc" onclick="counter(${ele.id})">+</button>
+                 <button class="btn btn-danger" id="dec" onclick="count(${ele.id})">-</button>
                
 
            
@@ -117,7 +117,7 @@ function mainfun(){
         )
         targetitem.quantity++;
        
-        targetitem.price= targetitem.price+targetitem.originalprice;
+        targetitem.price+=targetitem.originalprice;
         
         mainfun()
         
@@ -130,7 +130,7 @@ function mainfun(){
         )
         if(target.quantity>0){
             target.quantity--;
-             target.price = target.price - target.originalprice;
+             target.price-=target.originalprice;
         }
         mainfun()
         
