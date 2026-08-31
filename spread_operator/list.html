@@ -9,11 +9,19 @@
     
 </body>
 <script>
-    let a=[1,2,3,4,5]
+    let a=[1,2,3,4,5,["a","b","c"]]
     let b=[...a]
     console.log(a,b)
 
     let x=[...a,...b,"hello"]
     console.log(x)
+
+    let y=[...a]
+    console.log(y)
+
+
+    y[5][0]="g"
+
+    console.log(a,y)
 </script>
 </html>
