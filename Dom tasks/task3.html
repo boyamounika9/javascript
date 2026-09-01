@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="atag" href="https://www.youtube.com/"></a>
+    <button id="btn">get url</button>
+    <p id="ptag"></p>
+</body>
+
+<script>
+    let btn=document.getElementById('btn');
+    let atag=document.getElementById('atag');
+    let ptag=document.getElementById('ptag')
+
+    btn.addEventListener('click',function(){
+        let show=atag.getAttribute('href');
+        ptag.textContent=show
+
+    })
+
+</script>
+</html>
