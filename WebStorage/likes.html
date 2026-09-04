@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.MInViflWTn0CIsOU3esbLwHaE5?r=0&pid=Api&h=220&P=0" class="card-img-top" alt="...">
+        <div class="card-body">
+            <button type="button" class="btn btn-primary" id="likebtn">like</button>
+            <p>Likes : <span id="likecount"></span></p>
+
+            <button type="button" class="btn btn-danger" id="dislikebtn">Dislike</button>
+            <p>Disikes : <span id="dislikecount"></span></p>
+        </div>
+    </div>
+</body>
+<script>
+    let likebtn = document.getElementById('likebtn');
+    let likecount = document.getElementById('likecount');
+    let dislikebtn = document.getElementById('dislikebtn');
+    let dislikecount = document.getElementById('dislikecount');
+
+
+
+    let count = 0
+    likebtn.addEventListener('click', function () {
+
+        count++;
+        likecount.textContent = count
+
+        localStorage.setItem('likes', count)
+    })
+    let stored_count = localStorage.getItem('likes')
+    
+    likecount.textContent = stored_count
+    count += stored_count
+
+
+
+
+     let dislcount = 0
+    dislikebtn.addEventListener('click', function () {
+
+        dislcount++;
+        dislikecount.textContent = dislcount
+
+        localStorage.setItem('dislikes', dislcount)
+    })
+    let storedcount = localStorage.getItem('dislikes')
+    dislikecount.textContent = storedcount
+    dislcount += storedcount
+
+
+</script>
+
+</html>
