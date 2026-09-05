@@ -46,19 +46,20 @@
 let formEle = document.getElementById('form-ele');
 let inputEle = document.getElementById('task-input');
 let listDisplay = document.getElementById('list-display');
-let totalDisplay = document.getElementById('total-count')
+let totalDisplay = document.getElementById('total-count');
+
 
 let taskList = [];
 
 function displayItems() {
     let htmlCode = ``;
 
-    taskList.forEach(function (task) {
+    taskList.forEach(function (task,index) {
         htmlCode += `<li class="lisxt-group-item">
-                        <input type="checkbox" class="form-check-input">
-                        <span class="h5 mx-2">${task.task}</span>
+                        <input type="checkbox" class="form-check-input" ${task.isCompleted?'checked':''} onchange=taskchecked(event,${task.id})>
+                        <span class="h5 mx-2 ${task.isCompleted?'text-danger':'text-success'}">${task.task}</span>
                         <span class="text-secondary mx-2"> Created on: ${task.date}</span>
-                        <button class="btn btn float-end">Delete❌</button>
+                        <button class="btn btn float-end" onclick=taskdelete(${index})>Delete❌</button>
                     </li>`
 
     })
@@ -87,6 +88,14 @@ formEle.addEventListener('submit', function (e) {
         alert('Enter valid Input')
     }
 })
+
+function taskchecked(e,id){
+    let checkedtask=taskList.find((ele=>ele.id==id))
+    checkedtask.isCompleted=e.target.checked
+            displayItems();
+
+}
+
 
     </script>
 </body>
