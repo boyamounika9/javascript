@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        #displayarea {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Task Management</a>
+            <button class="btn btn-warning text-bold">Total Task: <span id="total-count">0</span></button>
+        </div>
+    </nav>
+
+    <section class="col-8 m-auto">
+        <form id="form-ele">
+
+            <div class="mb-3 m-5">
+                <label for="tasktitleinput" class="form-label">Task Title</label>
+                <input type="text" class="form-control" id="tasktitleinput" placeholder="Enter task title">
+            </div>
+            <div class="mb-3  m-5">
+                <label for="taskdescinput" class="form-label">Discription</label>
+                <textarea class="form-control" id="taskdescinput" rows="3"></textarea>
+            </div>
+
+            <input type="submit" value="Add Task" class="btn btn-warning btn-sm ">
+
+
+        </form>
+    </section>
+
+    <section class="container-fluid mt-4" id="displayarea">
+
+    </section>
+
+
+
+
+
+</body>
+
+<script>
+    let formele = document.getElementById('form-ele');
+    let tasktitleinput = document.getElementById('tasktitleinput');
+    let taskdescinput = document.getElementById('taskdescinput');
+    let totalcount = document.getElementById('total-count');
+    let displayarea = document.getElementById('displayarea');
+
+
+    let tasklist = [];
+
+
+    let colors = [
+        "#ffadad",
+        "#ffd6a5",
+        "#fdffb6",
+        "#caffbf",
+        "#9bf6ff",
+        "#a0c4ff",
+        "#bdb2ff",
+        "#ffc6ff"
+    ];
+
+
+    function main() {
+        let htmlcode = ``;
+
+        tasklist.forEach(function (task) {
+            htmlcode += `    <div class="card m-3 p-3" 
+                 style="background-color: ${task.color};">
+                 
+                <h2>${task.tasktitle}</h2>
+                <p>${task.taskdesc}</p>
+                
+            </div> `
+
+        })
+        displayarea.innerHTML = htmlcode;
+
+    }
+    main()
+
+    formele.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let title = tasktitleinput.value;
+        let desc = taskdescinput.value;
+        if (title) {
+            let newobj = {
+                id: Math.trunc(Math.random() * 1000),
+                tasktitle: title,
+                taskdesc: desc,
+                color: colors[Math.floor(Math.random() * colors.length)]
+
+            }
+
+            tasklist.push(newobj);
+            tasktitleinput.value = ""
+            taskdescinput.value = ""
+            let listlength = tasklist.length;
+            totalcount.textContent = listlength;
+
+            main()
+        }
+        else {
+            alert("enter valid inputs")
+        }
+
+    })
+
+
+
+
+
+</script>
+
+</html>
