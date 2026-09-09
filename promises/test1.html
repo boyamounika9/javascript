@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+//pending state
+   let p0=new Promise((sucess,failure)=>{
+       
+    });
+    console.log(p0)
+
+
+    
+    let p1=new Promise((sucess,failure)=>{
+        console.log("i am sucess")
+        sucess("i am success 😁")
+    });
+    console.log(p1)
+
+       let p2=new Promise((sucess,failure)=>{
+        console.log("i am failure")
+        failure("i am failure ")
+    });
+    console.log(p2)
+
+
+       let p3=new Promise((sucess,failure)=>{
+       let pass=true
+       if(pass){
+        sucess("hureeyyyyyy i am pass 😉")
+       }
+       else{
+        failure("i am failed 😒")
+       }
+    });
+    console.log(p3)
+
+
+
+</script>
+</html>
