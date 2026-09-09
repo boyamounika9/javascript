@@ -11,34 +11,34 @@
 <script>
 
 //pending state
-   let p0=new Promise((sucess,failure)=>{
+//    let p0=new Promise((sucess,failure)=>{
        
-    });
-    console.log(p0)
+//     });
+//     console.log(p0)
 
 
     //success state
-    let p1=new Promise((sucess,failure)=>{
-        console.log("i am sucess")
-        sucess("i am success 😁")
-    });
-    console.log(p1)
+    // let p1=new Promise((sucess,failure)=>{
+    //     console.log("i am sucess")
+    //     sucess("i am success 😁")
+    // });
+    // console.log(p1)
 
 
     //failure state
 
-       let p2=new Promise((sucess,failure)=>{
-        console.log("i am failure")
-        failure("i am failure ")
-    });
-    console.log(p2)
+    //    let p2=new Promise((sucess,failure)=>{
+    //     console.log("i am failure")
+    //     failure("i am failure ")
+    // });
+    // console.log(p2)
 
 
 
     //with condition
 
        let p3=new Promise((sucess,failure)=>{
-       let pass=true
+       let pass=false
        if(pass){
         sucess("hureeyyyyyy i am pass 😉")
        }
@@ -46,7 +46,12 @@
         failure("i am failed 😒")
        }
     });
-    console.log(p3)
+    // console.log(p3)
+
+
+    p3.then((data)=>console.log(data)).catch((err)=>console.log(err)).finally(()=>console.log("completed"))
+
+
 
 
 
