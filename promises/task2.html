@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <style>
+            #container{
+                display: grid;
+                grid-template-columns: repeat(3,auto);
+            }
+        </style>
+</head>
+
+<body>
+
+    <section id="container">
+
+    </section>
+</body>
+<script>
+
+
+    let container = document.getElementById('container')
+
+    let p1 = window.fetch("https://dummyjson.com/products")
+    let p2 = p1.then((res) => {
+        return res.json();
+    })
+
+
+    p2.then((data) => {
+
+        mainfun(data.products)
+
+    })
+
+     function mainfun(edata) {
+            let emdata = "";
+            edata.forEach((ele) => {
+                emdata += `    <div class="card m-3 p-3" 
+                 style="background-color: yellow;">
+                 
+                <h2  style="color: red;">  ${ele.title}</h2>
+                <p> description: ${ele.description}</p>
+                <p> category: ${ele.category}</p>
+                <p> price:${ele.price}</p>
+
+                
+            </div> `
+            })
+
+            container.innerHTML = emdata;
+        }
+       
+
+
+
+
+
+
+</script>
+
+</html>
