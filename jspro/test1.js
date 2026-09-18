@@ -49,16 +49,31 @@
 
 //write a js program to count how many even digits and hoe many odd digits  in a given number
 
-let num5=825;
-let even=0, odd= 0;
-while(num5!=0){
-    let digit=num5%10;
-    if (digit%2==0){ even+=1}
+// let num5=825;
+// let even=0, odd= 0;
+// while(num5!=0){
+//     let digit=num5%10;
+//     if (digit%2==0){ even+=1}
        
-    else {odd+=1}
+//     else {odd+=1}
   
-    num5=Math.floor(num5/10)  
+//     num5=Math.floor(num5/10) 
+    
+   
+// }
+
+// console.log(`even digits: ${even}`)
+// console.log(`odd digits: ${odd}`)
+
+
+//wjsp to find sum of the sqare of the each digits of a given number 
+
+let num6=825;
+let sum=0
+while(num6!=0){
+    let digit=num6%10;
+    sum+=digit**2
+    num6=Math.floor(num6/10)  
 }
 
-console.log(`even digits: ${even}`)
-console.log(`odd digits: ${odd}`)
+console.log(sum)
