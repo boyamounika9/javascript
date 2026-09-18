@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grand-parent{
+            background-color: purple;
+            height: 300px;
+            width: 300px;
+            border:solid 2px;
+            padding: 20px;
+            border: solid 2px;
+        
+        
+        #parent{
+            height: 200px;
+            width: 200px;
+            background-color: burlywood;
+            padding: 20px;
+            border: solid 2px;
+
+        }
+
+        #child{
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+            padding: 20px;
+            border: solid 2px;
+
+        }
+
+        #target{
+             background-color: aliceblue;
+             color: black;
+             border: solid 2px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="grand-parent">
+        <div id="parent">
+            <div id="child">
+                <button id="target">Click Me!!</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('grand-parent').addEventListener('click',function(){
+            console.log('Grand-Parent Clicked!!')
+        },false)
+
+         document.getElementById('parent').addEventListener('click',function(){
+            console.log('Parent Clicked!!')
+        },false)
+
+         document.getElementById('child').addEventListener('click',function(){
+            console.log('Child Clicked!!')
+        },false)
+
+         document.getElementById('target').addEventListener('click',function(){
+            console.log('Target Clicked!!')
+        },false)
+    </script>
+
+
+</body>
+</html>
