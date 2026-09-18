@@ -37,12 +37,28 @@
 //write a js program to sum of all digits in a given number
 
 
-let num4=825;
-let sum=0
-while(num4!=0){
-    let digit=num4%10;
-    sum+=digit
-    num4=Math.floor(num4/10)  
+// let num4=825;
+// let sum=0
+// while(num4!=0){
+//     let digit=num4%10;
+//     sum+=digit
+//     num4=Math.floor(num4/10)  
+// }
+
+// console.log(sum)
+
+//write a js program to count how many even digits and hoe many odd digits  in a given number
+
+let num5=825;
+let even=0, odd= 0;
+while(num5!=0){
+    let digit=num5%10;
+    if (digit%2==0){ even+=1}
+       
+    else {odd+=1}
+  
+    num5=Math.floor(num5/10)  
 }
 
-console.log(sum)
+console.log(`even digits: ${even}`)
+console.log(`odd digits: ${odd}`)
