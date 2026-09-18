@@ -23,15 +23,26 @@
 
 //write a js program to reverse a number wtout using inbuilt method"
 
-let num3=892;
-let reverse=0
-while(num3!=0){
-    let digit=num3%10;
-    reverse=reverse*10+digit
-    num3=Math.floor(num3/10)  
+// let num3=892;
+// let reverse=0
+// while(num3!=0){
+//     let digit=num3%10;
+//     reverse=reverse*10+digit
+//     num3=Math.floor(num3/10)  
+// }
+
+// console.log(reverse)
+
+
+//write a js program to sum of all digits in a given number
+
+
+let num4=825;
+let sum=0
+while(num4!=0){
+    let digit=num4%10;
+    sum+=digit
+    num4=Math.floor(num4/10)  
 }
 
-console.log(reverse)
-
-
-
+console.log(sum)
